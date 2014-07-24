@@ -12,26 +12,26 @@
 #include <vector>
 #include <queue>
 #include "TreeNode.h"
-#include "TreeNode.cpp" // DELETE*************************
 
 #define RANGE 128
 
-using namespace std;
-
-int main ()
-//int main (int argc , char * argv [])
+int main (int argc , char * argv [])
 {
-  // ifstream fin (argv[2], ios_base::in);
-  ifstream fin ("DATA1.txt", ios_base::in);
-  string line;
+  if (argc != 2)
+  { std::cout << "Invalid parameters" << std::endl; return -1; }
+  
+  std::ifstream fin (argv[1], std::ios_base::in);
+  if (fin == false)
+  { std::cout << "Bad filename" << std::endl; return -2; }
+  std::string line;
 
   unsigned int freq [RANGE] = {0};
   unsigned int total = 0;
-  string input = "";
-  string huffcode [RANGE];
+  std::string input = "";
+  std::string huffcode [RANGE];
 
   // The Huffman Tree
-  priority_queue <greater <Node>, vector <Node> > tree;
+  std::priority_queue <std::greater <Node>, std::vector <Node> > tree;
 
   /**
    * Tabulates the number of occurrences of each unique character in
@@ -64,6 +64,6 @@ int main ()
   // Prints out compressed text
   tree.top ().store_code (huffcode);
   for (int i = 0; i < input.length (); i++)
-    cout << huffcode [input[i]] << " ";
-  cout << endl;
+    std::cout << huffcode [input[i]] << " ";
+  std::cout << std::endl;
 }

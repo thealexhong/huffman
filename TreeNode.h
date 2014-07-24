@@ -59,7 +59,7 @@ class Node
     /*
      * Stores the Huffman code
      */
-    void  store_code (std::string* arr, std::string code = "") const;
+    void store_code (std::string* arr, std::string code = "") const;
 
     /*
      * Accessor Methods

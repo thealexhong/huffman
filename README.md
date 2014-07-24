@@ -1,5 +1,4 @@
 #README
-##DESCRIPTION
 This program compresses data using a technique called Huffman coding.
 The program accepts an input file of text with ASCII values from
 0 to 127, and builds a Huffman tree. The tree is used to assign
@@ -65,7 +64,9 @@ Huffman code of the input to the standard output stream.
   for the priority queue to compare two different Node objects. In this
   assignment, the less likely the character is, the higher priority it has
   in the queue. When comparing two Nodes,
+  
             Node n1 < Node n2 iff n1.probability > n2.probability
+
   So n2 has a higher priority in the above example if the statement is true.
   The store_code method, defined in TreeNode.cpp, stores the Huffman code.
   The class also has accessor methods (getters). This is done to

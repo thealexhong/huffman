@@ -1,12 +1,10 @@
 #include <string>
 #include "TreeNode.h"
 
-using namespace std;
-
 /*
  * Stores the Huffman code
  */
-void Node::store_code (string* arr, string code) const
+void Node::store_code (std::string* arr, std::string code) const
 {
   if (get_lchild ())
   {
