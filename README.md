@@ -13,15 +13,15 @@ Huffman code of the input to the standard output stream.
 * TreeNode.h
 
 ###HuffmanMain.cpp
-  ####VARIABLES
-  RANGE: 128 characters
-  fin: file input stream
-  line: temporary string for reading file
-  freq: number of occurences of each character
-  total: total number of characters
-  input: string that represents the file input
-  huffcode: the Huffman code for each unique character
-  tree: the Huffman tree (heap-based priority queue)
+####VARIABLES
+  * RANGE: 128 characters
+  * fin: file input stream
+  * line: temporary string for reading file
+  * freq: number of occurences of each character
+  * total: total number of characters
+  * input: string that represents the file input
+  * huffcode: the Huffman code for each unique character
+  * tree: the Huffman tree (heap-based priority queue)
   
   The main source file. The program reads in from an input file and
   tabulates the number of occurrences of each unique character in the
@@ -39,21 +39,21 @@ Huffman code of the input to the standard output stream.
   code for each character and finally outputing the
   compressed text - the Huffman code.
   
-  k: number of unique characters
-  n: number of characters
-  Program requires O(k) space.
-  Tabulating frequency and probability calculations run in O(n) time.
-  Inserting nodes to heap-based priority queue run in O(k) time.
-  Creating internal nodes until tree is size 1 run in O(k log k) time.
-  Accessing root of Huffman tree takes O(1) time.
-  Assigning code to each unique character takes O(k) time.
-  Printing Huffman code takes O(n) time.
+  * k: number of unique characters
+  * n: number of characters
+  * Program requires O(k) space.
+  * Tabulating frequency and probability calculations run in O(n) time.
+  * Inserting nodes to heap-based priority queue run in O(k) time.
+  * Creating internal nodes until tree is size 1 run in O(k log k) time.
+  * Accessing root of Huffman tree takes O(1) time.
+  * Assigning code to each unique character takes O(k) time.
+  * Printing Huffman code takes O(n) time.
   
 ###TreeNode.h
-  ####VARIABLES
-  value: the character being stored
-  lchild: left child of this node
-  rchild: right child of this node
+####VARIABLES
+  * value: the character being stored
+  * lchild: left child of this node
+  * rchild: right child of this node
   
   This header file contains the Node class. Its constructor initializes 
   the character being stored and the probability of the character.
@@ -88,14 +88,14 @@ as a queue except that it is highest priority out first, instead
 of FIFO. The top () method will return the Node of the highest priority
 in the queue. The push () and pop () methods run in logarithmic time.
 
-TEST FILES
-  DATA1.txt: A simple test file containing "SEASHELLS" with no newline.
-  DATA2.txt: Same as DATA1.txt but with newline.
-  DATA3.txt: A file containing both upper and lower case
-  DATA4.txt: A file containing non-alphabet
-  DATA5.txt: A file containing more than 50 characters
-  DATA6.txt: A file containing 2 repetitive characters
-  DATA7.txt: A file containing repetitive characters
-  DATA8.txt: A file containing characters with equal probabilities
-  DATA9.txt: A file with just newlines and spaces
-  DATA10.txt: A large test file
+####TEST FILES
+  * DATA1.txt: A simple test file containing "SEASHELLS" with no newline.
+  * DATA2.txt: Same as DATA1.txt but with newline.
+  * DATA3.txt: A file containing both upper and lower case
+  * DATA4.txt: A file containing non-alphabet
+  * DATA5.txt: A file containing more than 50 characters
+  * DATA6.txt: A file containing 2 repetitive characters
+  * DATA7.txt: A file containing repetitive characters
+  * DATA8.txt: A file containing characters with equal probabilities
+  * DATA9.txt: A file with just newlines and spaces
+  * DATA10.txt: A large test file
